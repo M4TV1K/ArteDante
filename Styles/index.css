@@ -1,0 +1,470 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1A1A1A;
+    overflow: hidden;
+    font-family: Scada, sans-serif;
+}
+
+#loading {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+#loadLeftHand {
+    margin-bottom: 6vw;
+}
+#loading > img {
+    width: 21vw;
+}
+#loadRightHand {
+    margin-bottom: 4vw;
+}
+
+
+#nav-menu {
+    z-index: 25;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+}
+#menuContainer {
+    width: 90vw;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    font-size: 2vw;
+    margin: 0;
+    cursor: pointer;
+    color: white;
+}
+#logo:active {
+    opacity: 0.5;
+}
+
+#middleMenu {
+    width: 53.25vw;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+nav {
+    display: flex;
+    flex-flow: row nowrap;
+}
+nav > button {
+    cursor: pointer;
+    font-size: 1vw;
+    font-family: Scada, sans-serif;
+    color: rgba(255, 255, 255, 0.75);
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+nav > button:hover {
+    color: white
+}
+nav > button:active {
+    opacity: 0.5;
+}
+#usBtn {
+    margin-left: 2vw;
+    margin-right: 2vw;
+}
+#soundBtn {
+    cursor: pointer;
+    width: 2.1vw;
+    height: 2vw;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background-image: url(../Assets/nav-menu/mute.svg);
+    opacity: 0.75;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+}
+#soundBtn:hover {
+    opacity: 1;
+}
+
+.makeOrder:active {
+    opacity: 0.5;
+}
+.makeOrder {
+    cursor: pointer;
+    font-family: Scada, sans-serif;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(left , #151515 50%, transparent 50%);
+    background-image: -o-linear-gradient(left , #151515 50%, transparent 50%);
+    background-image: -moz-linear-gradient(left , #151515 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(left , #151515 50%, transparent 50%);
+    background-image: -ms-linear-gradient(left , #151515 50%, transparent 50%);
+    color: white;
+    font-size: 1vw;
+    height: 2.5vw;
+    padding-left: 1.25vw;
+    padding-right: 1.25vw;
+}
+.makeOrder:hover {
+    background-image: linear-gradient(left , white 50%, transparent 50%);
+    background-image: -o-linear-gradient(left , white 50%, transparent 50%);
+    background-image: -moz-linear-gradient(left , white 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(left , white 50%, transparent 50%);
+    background-image: -ms-linear-gradient(left , white 50%, transparent 50%);
+}
+.smallArrowImg {
+    opacity: 0.75;
+    transform: rotate(180deg);
+    margin-top: 0.1vw;
+    width: 0.9vw;
+}
+
+
+#navigationalArrows {
+    margin-top: 12vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+.arrow {
+    cursor: pointer;
+    opacity: 0.75;
+    width: 3.5vw;
+    height: 2.5vw;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+}
+.arrow:hover {
+    opacity: 1;
+}
+.arrow:active {
+    opacity: 0.5;
+}
+#leftArrow {
+    background-image: url(../Assets/nav-menu/arrow.svg);
+}
+#rightArrow {
+    transform: rotate(180deg);
+    background-image: url(../Assets/nav-menu/arrow.svg);
+}
+
+
+#vertical-menu, #social-menu {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+#language-menu {
+    margin-top: 13vh;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+#engLanguage {
+    margin-top: 0;
+}
+.language-btn {
+    margin-top: 2vw;
+    font-size: 1vw;
+    opacity: 0.75;
+    font-family: 'Scada', sans-serif;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: white;
+    cursor: pointer;
+    padding: 0;
+    transform: rotate(90deg);
+}
+.language-btn:active {
+    opacity: 0.5;
+}
+.language-btn:hover {
+    opacity: 1;
+}
+
+#social-menu-slides {
+    margin-top: 13vh;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.social-btn {
+    margin-top: 3vh;
+    cursor: pointer;
+    opacity: 0.75;
+    width: 1.25vw;
+    height: 1.25vw;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    background-size: 100% 100%;
+    background-position: 100% 100%;
+}
+.social-btn:active {
+    opacity: 0.5;
+}
+.social-btn:hover {
+    opacity: 1;
+}
+#instagram {
+    margin-top: 0;
+    background-image: url(../Assets/nav-menu/insta.svg);
+}
+#be {
+    background-image: url(../Assets/nav-menu/be.svg);
+}
+#ball {
+    background-image: url(../Assets/nav-menu/ball.svg);
+}
+#telegram {
+    background-image: url(../Assets/nav-menu/telegram.svg);
+}
+#facebook {
+    background-image: url(../Assets/nav-menu/facebook.svg);
+}
+#counter {
+    height: 3vw;
+    font-family: 'Gothic A1', 'Scada',sans-serif;
+    margin-bottom: 0;
+    font-size: 2vw;
+    color: #aaaaaa;
+}
+#currentSlide {
+    font-size: 3vw;
+    color: white;
+}
+
+
+
+#slides {
+    width: 100%;
+    height: 100%;
+}
+.slide {
+    background: linear-gradient(90deg, #0D0D0D 0%, #1A1A1A 100%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#backgroundVideo {
+    object-fit: fill;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    position: absolute;
+    z-index: 0;
+}
+#slide1 {
+    background: transparent none;
+    z-index: 1;
+}
+#slide2 {
+    z-index: 2;
+    left: 100%;
+}
+#slide3 {
+    z-index: 3;
+    left: 100%;
+}
+#slide4 {
+    z-index: 4;
+    left: 0;
+}
+#slide5 {
+    z-index: 5;
+    left: 100%;
+}
+#slide6 {
+    z-index: 6;
+    left: 100%;
+}
+
+#slide1 {
+    flex-flow: column nowrap;
+}
+#slide1Holder {
+    margin-right: 18vw;
+    margin-bottom: 13vh;
+}
+#designNDevelopment {
+    margin-bottom: 2vh;
+    font-size: 1.32vw;
+    color: #F8F8F8;
+    opacity: 0.85;
+}
+#poetry {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 3.3vw;
+    line-height: 8.5vh;
+    font-family: "Gothic A1", sans-serif;
+    color: #F8F8F8;
+}
+
+.slide-holder {
+    background-color: #1A1A1A;
+    box-shadow: 0 4px 100px #000000;
+    margin-top: 7vh;
+    height: 75vh;
+    width: 70vw;
+}
+
+/*slide 2*/
+#slide2Holder, #slide4Holder {
+    position: relative;
+    z-index: 1;
+}
+#aboutUs {
+    margin-top: 16vh;
+    margin-left: 6.5vw;
+}
+#slide2Header {
+    font-size: 2.5vw;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Gothic A1", sans-serif;
+    color: white;
+}
+.slide2-text {
+    font-size: 1.05vw;
+    color: #CECECE;
+}
+#slide2Text1 {
+    margin-top: 3vh;
+    margin-bottom: 0;
+}
+#slide2Text2 {
+    margin-top: 2.5vh;
+}
+#angel {
+    z-index: 2;
+    position: absolute;
+    width: 65vw;
+    right: 4vw;
+}
+.cloud-top {
+    position: absolute;
+    width: 40vw;
+    left: 0;
+    top: 5vh;
+    z-index: 0;
+}
+.cloud-bottom {
+    position: absolute;
+    width: 35vw;
+    right: 5vw;
+    bottom: 0;
+    z-index: 0;
+}
+/*-----*/
+
+/*slide3*/
+#illustration {
+    margin-top: 18vh;
+    margin-left: 8vw;
+}
+#illustrationText {
+    font-size: 1.25vw;
+    color: #A0A0A0;
+}
+#whatHappens {
+    margin-top: 2.5vh;
+    margin-bottom: 0;
+    font-size: 1.75vw;
+    font-family: "Gothic A1", sans-serif;
+    color: white;
+}
+#slide3Text {
+    margin-top: 5vh;
+    font-size: 1.2vw;
+    color: #EBEBEB;
+}
+#man {
+    position: absolute;
+    width: 35vw;
+    right: 20vw;
+    top: 20vh;
+}
+/*------*/
+
+/*slide4*/
+#servicesHolder {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+#slide4TextHolder {
+    margin-top: 10vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+#serviceHeader {
+    margin-top: 0;
+    margin-bottom: 6vh;
+    font-size: 2.2vw;
+    font-family: "Gothic A1", sans-serif;
+    color: white;
+}
+.service-header {
+    margin-top: 0;
+    margin-bottom: 4vh;
+    font-size: 1.4vw;
+    color: white;
+    font-weight: normal;
+}
+.service {
+    margin-top: 0;
+    margin-bottom: 2.5vh;
+    font-size: 1.05vw;
+    color: #CECECE;
+}
+.service:hover {
+    color: white;
+}
+#big-cloud-4slide {
+    position: absolute;
+    width: 36vw;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+/*------*/
+
+/*slide6*/
+#slide6Holder {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#makeOrderBtn {
+    position: relative;
+    z-index: 26;
+}
+/*------*/

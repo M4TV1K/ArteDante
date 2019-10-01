@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>ArteDante</title>
+    <link href="https://fonts.googleapis.com/css?family=Scada&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gothic+A1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Styles/loader.css">
+    <link rel="stylesheet" href="Styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="Scripts/index.js"></script>
+</head>
+<body>
+    <!--<div id="loading" hidden>
+        <img id="loadLeftHand" src="Assets/loading/load-left-hand.png" alt="Рука зліва показуюча на загрузку">
+        <span class="load"></span>
+        <img id="loadRightHand" src="Assets/loading/load-right-hand.png" alt="Руку справа показуюча на загрузку">
+    </div>-->
+
+    <!--style="display: none"-->
+    <div id="nav-menu">
+        <article>
+            <section id="menuContainer">
+                <h1 id="logo">ArteDante</h1>
+                <section id="middleMenu">
+                    <nav>
+                        <button id="portfolioBtn">Портфоліо</button>
+                        <button id="usBtn">Ми</button>
+                        <button id="Contacts">Контакти</button>
+                    </nav>
+                    <button id="soundBtn"></button>
+                    <section>
+                        <button class="makeOrder"><a class="lightUp">Замовит</a>и проект</button>
+                        <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                    </section>
+                </section>
+            </section>
+            <section id="navigationalArrows">
+                <button id="leftArrow" class="arrow"></button>
+                <button id="rightArrow" class="arrow"></button>
+            </section>
+        </article>
+
+        <div id="vertical-menu">
+            <section id="language-menu">
+                <button id="engLanguage" class="language-btn">Eng</button>
+                <button id="ruLanguage" class="language-btn">Рус</button>
+                <button id="uaLanguage" class="language-btn">Укр</button>
+            </section>
+            <article id="social-menu-slides">
+                <section id="social-menu">
+                    <button id="instagram" class="social-btn"></button>
+                    <button id="be" class="social-btn"></button>
+                    <button id="ball" class="social-btn"></button>
+                    <button id="telegram" class="social-btn"></button>
+                    <button id="facebook" class="social-btn"></button>
+                </section>
+                <p id="counter"><a id="currentSlide">01</a> / 06</p>
+            </article>
+        </div>
+    </div>
+
+    <div id="make-order" hidden>
+
+    </div>
+
+    <video id="backgroundVideo" preload="auto" autoplay loop muted src="Assets/slide1/final.mp4"></video>
+    <article id="slides">
+        <section id="slide1" class="slide">
+            <article id="slide1Holder">
+                <h2 id="designNDevelopment">Design & Development</h2>
+                <h1 id="poetry">Якщо код — це поезія,<br>то ми Данте</h1>
+            </article>
+        </section>
+
+        <section id="slide2" class="slide">
+            <article id="slide2Holder" class="slide-holder">
+                <section id="aboutUs">
+                    <h1 id="slide2Header">Ми є</h1>
+                    <p id="slide2Text1" class="slide2-text">
+                        Молода команда ArteDante. Створюємо<br>
+                        якісні, та візуально привабливі цифрові<br>
+                        продукти, які допомагають цілям бізнесу.
+                    </p>
+                    <p id="slide2Text2" class="slide2-text">
+                        Команда дизайнерів може повністю<br>
+                        продумати ефективний дизайн вашого<br>
+                        бізнесу, а команда програмістів може<br>
+                        реалізувати все задумане.
+                    </p>
+                </section>
+            </article>
+            <img id="angel" src="Assets/slide2/angel.png" alt="Фотографія янгола з булькою з гумки">
+            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
+        </section>
+
+        <section id="slide3" class="slide">
+            <article class="slide-holder">
+                <section id="illustration">
+                    <p id="illustrationText">Іллюстрація:</p>
+                    <h1 id="whatHappens">
+                        Що буває, коли<br>
+                        недооцінюєш якісний дизайн
+                    </h1>
+                    <p id="slide3Text">
+                        Цей чоловік не дооцінив внесок<br>
+                        якісного дизайну в бізнес, тим саме<br>
+                        застряв у відсутності клієнтів
+                    </p>
+                </section>
+            </article>
+            <img id="man" src="Assets/slide3/stuck-man.png" alt="Чоловік, який застряг">
+        </section>
+
+        <section id="slide4" class="slide">
+            <article id="slide4Holder" class="slide-holder">
+                <article id="slide4TextHolder">
+                    <h1 id="serviceHeader">Наші послуги</h1>
+                    <section id="servicesHolder">
+                        <section class="service-list">
+                            <h1 class="service-header">Бренд</h1>
+                            <p class="service">Айдентика</p>
+                            <p class="service">Брендинг</p>
+                            <p class="service">Логотип</p>
+                            <p class="service">Брендбук</p>
+                        </section>
+                        <section class="service-list">
+                            <h1 class="service-header">UX/UI</h1>
+                            <p class="service">Інтернет Магазин</p>
+                            <p class="service">Landing - page</p>
+                            <p class="service">Сайт візитка</p>
+                            <p class="service">Промо сайт</p>
+                            <p class="service">Корпоративний сайт</p>
+                            <p class="service">Мобільний додаток</p>
+                        </section>
+                        <section class="service-list">
+                            <h1 class="service-header">Розробка</h1>
+                            <p class="service">Front - end</p>
+                            <p class="service">Back - end</p>
+                            <p class="service">Seo і serm оптимізація</p>
+                            <p class="service">Прикладне програмне<br>забезпечення</p>
+                        </section>
+                    </section>
+                </article>
+            </article>
+            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="big-cloud-4slide" src="Assets/slide4/big-cloud.png" alt="Хмарка">
+        </section>
+
+        <section id="slide5" class="slide">
+            <h1 style="color: aliceblue; font-size: 5vw">Скоро буде Пушка</h1>
+        </section>
+
+        <section id="slide6" class="slide">
+            <article id="slide6Holder" class="slide-holder">
+                <div id="makeOrderBtn">
+                    <button class="makeOrder"><a class="lightUp">Замовит</a>и проект</button>
+                    <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                </div>
+            </article>
+            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
+        </section>
+    </article>
+</body>
+</html>
