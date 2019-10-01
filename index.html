@@ -31,8 +31,8 @@
                     </nav>
                     <button id="soundBtn"></button>
                     <section>
-                        <button class="makeOrder"><a class="lightUp">Замовит</a>и проект</button>
-                        <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                        <button id="makeOrderTop" class="makeOrder"><a id="lightUpTop">Замовит</a>и проект</button>
+                        <img id="topArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
                     </section>
                 </section>
             </section>
@@ -41,30 +41,28 @@
                 <button id="rightArrow" class="arrow"></button>
             </section>
         </article>
-
-        <div id="vertical-menu">
-            <section id="language-menu">
-                <button id="engLanguage" class="language-btn">Eng</button>
-                <button id="ruLanguage" class="language-btn">Рус</button>
-                <button id="uaLanguage" class="language-btn">Укр</button>
-            </section>
-            <article id="social-menu-slides">
-                <section id="social-menu">
-                    <button id="instagram" class="social-btn"></button>
-                    <button id="be" class="social-btn"></button>
-                    <button id="ball" class="social-btn"></button>
-                    <button id="telegram" class="social-btn"></button>
-                    <button id="facebook" class="social-btn"></button>
-                </section>
-                <p id="counter"><a id="currentSlide">01</a> / 06</p>
-            </article>
-        </div>
     </div>
-
-    <div id="make-order" hidden>
-
+    <div id="vertical-menu">
+        <section id="language-menu">
+            <button id="engLanguage" class="language-btn">Eng</button>
+            <button id="ruLanguage" class="language-btn">Рус</button>
+            <button id="uaLanguage" class="language-btn">Укр</button>
+        </section>
+        <section id="social-menu">
+            <button id="instagram" class="social-btn"></button>
+            <button id="be" class="social-btn"></button>
+            <button id="ball" class="social-btn"></button>
+            <button id="telegram" class="social-btn"></button>
+            <button id="facebook" class="social-btn"></button>
+        </section>
     </div>
+    <p id="counter"><a id="currentSlide">01</a> / 06</p>
 
+    <div id="make-order-menu" hidden></div>
+
+    <audio id="backgroundAudio" loop>
+        <source src="Assets/background-audio.mp3" type="audio/mpeg">
+    </audio>
     <video id="backgroundVideo" preload="auto" autoplay loop muted src="Assets/slide1/final.mp4"></video>
     <article id="slides">
         <section id="slide1" class="slide">
@@ -155,13 +153,16 @@
 
         <section id="slide6" class="slide">
             <article id="slide6Holder" class="slide-holder">
-                <div id="makeOrderBtn">
-                    <button class="makeOrder"><a class="lightUp">Замовит</a>и проект</button>
-                    <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                <img id="digitalLeftHand" src="Assets/slide6/left-hand.png" alt="ліва рука з похибками">
+                <div>
+                    <button id="makeOrderSlide" class="makeOrder"><a id="lightUpSlide">Замовит</a>и проект</button>
+                    <img id="bottomArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
                 </div>
+                <img id="digitalRightHand" src="Assets/slide6/right-hand.png" alt="права рука з похибками">
             </article>
             <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
-            <img class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="bottomCloud6" class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="bigCloud6slide" src="Assets/slide6/big-cloud.png" alt="Хмарка">
         </section>
     </article>
 </body>

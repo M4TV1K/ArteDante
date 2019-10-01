@@ -134,7 +134,6 @@ nav > button:active {
     width: 0.9vw;
 }
 
-
 #navigationalArrows {
     margin-top: 12vh;
     display: flex;
@@ -167,12 +166,17 @@ nav > button:active {
 }
 
 
+#vertical-menu {
+    position: fixed;
+    z-index: 25;
+    left: 5vw;
+    top: 25vh;
+}
 #vertical-menu, #social-menu {
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;
 }
-
 #language-menu {
     margin-top: 13vh;
     display: flex;
@@ -201,13 +205,8 @@ nav > button:active {
 .language-btn:hover {
     opacity: 1;
 }
-
-#social-menu-slides {
+#social-menu {
     margin-top: 13vh;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 .social-btn {
     margin-top: 3vh;
@@ -244,7 +243,10 @@ nav > button:active {
     background-image: url(../Assets/nav-menu/facebook.svg);
 }
 #counter {
-    height: 3vw;
+    position: fixed;
+    z-index: 25;
+    right: 4vw;
+    bottom: 8vh;
     font-family: 'Gothic A1', 'Scada',sans-serif;
     margin-bottom: 0;
     font-size: 2vw;
@@ -293,11 +295,11 @@ nav > button:active {
 }
 #slide4 {
     z-index: 4;
-    left: 0;
+    left: 100%;
 }
 #slide5 {
     z-index: 5;
-    left: 100%;
+    left: 0;
 }
 #slide6 {
     z-index: 6;
@@ -463,8 +465,14 @@ nav > button:active {
     justify-content: space-between;
     align-items: center;
 }
-#makeOrderBtn {
-    position: relative;
-    z-index: 26;
+#bottomCloud6 {
+    z-index: 1;
+}
+#bigCloud6slide {
+    width: 50vw;
+    position: absolute;
+    z-index: 0;
+    right: 0;
+    bottom: 0;
 }
 /*------*/

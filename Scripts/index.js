@@ -3,13 +3,20 @@ const amountSlides = 6, animationSpeed = 500, time = 100;
 
 window.onload = () => {
     //todo remove comments and add 'hidden' attr where it's needed
-    /*add light-up to order btn*/
-    $('.makeOrder').mouseover(() => {
-        $('.lightUp').css('color', 'black');
-        $('.smallArrowImg').css('opacity', '1');
+    /*add light-up to order btn and action*/
+    $('#makeOrderTop').mouseover(() => {
+        $('#lightUpTop').css('color', 'black');
+        $('#topArrow').css('opacity', '1');
     }).mouseout(() => {
-        $('.lightUp').css('color', 'white');
-        $('.smallArrowImg').css('opacity', '0.75');
+        $('#lightUpTop').css('color', 'white');
+        $('#topArrow').css('opacity', '0.75');
+    });
+    $('#makeOrderSlide').mouseover(() => {
+        $('#lightUpSlide').css('color', 'black');
+        $('#bottomArrow').css('opacity', '1');
+    }).mouseout(() => {
+        $('#lightUpSlide').css('color', 'white');
+        $('#bottomArrow').css('opacity', '0.75');
     });
     /*-------------------------*/
     /*navigational arrows*/
@@ -20,11 +27,14 @@ window.onload = () => {
     /*sound button*/
     const $soundBtn = $('#soundBtn');
     $soundBtn.click(() => {
-        console.log($soundBtn.css('background-image'));
-        if ($soundBtn.css('background-image').toString().includes('mute.svg'))
+        if ($soundBtn.css('background-image').toString().includes('mute.svg')){
             $soundBtn.css('background-image', 'url(../ArteDante/Assets/nav-menu/sound.svg)');
-        else
+            $('#backgroundAudio')[0].play();
+        }
+        else {
             $soundBtn.css('background-image', 'url(../ArteDante/Assets/nav-menu/mute.svg)');
+            $('#backgroundAudio')[0].pause();
+        }
     });
     /*------------*/
     /*social media buttons*/
