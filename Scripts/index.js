@@ -52,12 +52,12 @@ window.onload = () => {
 };
 
 //todo assign this function to onmousewheel after loading
-window.onmousewheel = (evt) => {
+/*window.onmousewheel = (evt) => {
     console.log(liveAnimation + " " + currentSlide + "/" + amountSlides);
     console.log(evt.deltaX + ', ' + evt.deltaY);
     if (evt.deltaY > 1) nextSlide();
     else if (evt.deltaY < -1) prevSlide();
-};
+};*/
 
 function toTheFirstSlide(slide) {
     setTimeout(() => {

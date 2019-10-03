@@ -457,6 +457,58 @@ nav > button:active {
 }
 /*------*/
 
+/*slide5*/
+#projectsHolder {
+    overflow-y: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 1;
+}
+#firstProject {
+    margin-left: 25vw;
+}
+#lastProject {
+    margin-right: 50vw;
+}
+.project {
+    margin-left: 7.5vw;
+    background-color: #1A1A1A;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    width: 25vw;
+    height: 62vh;
+}
+.project-name {
+    position: absolute;
+    margin-top: 25vh;
+    font-weight: 500;
+    font-size: 2vw;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+.project-img {
+    margin-top: 7vh;
+    height: 45vh;
+}
+.project-type {
+    margin-top: 4vh;
+    font-family: "Gothic A1", sans-serif;
+    font-weight: bold;
+    font-size: 1vw;
+    color: #CECECE;
+}
+#bigCloud5Slide {
+    position: absolute;
+    width: 60vw;
+    z-index: 0;
+    right: 0;
+    bottom: 5vh;
+}
+/*------*/
+
 /*slide6*/
 #slide6Holder {
     position: relative;
