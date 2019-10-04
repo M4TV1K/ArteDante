@@ -1,0 +1,17 @@
+{
+    "ua": {
+        "slide1": {
+            "headerTakyiTo": "блін блін блін"
+        }
+    },
+    "en": {
+        "slide1": {
+            "headerTakyiTo": "You're a good lad"
+        }
+    },
+    "ru": {
+        "slide1": {
+            "headerTakyiTo": "вэл вэл вэл"
+        }
+    }
+}

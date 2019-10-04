@@ -1,5 +1,5 @@
-let currentSlide = 1, liveAnimation = false;
-const amountSlides = 6, animationSpeed = 500, time = 100;
+let currentSlide = 1, liveAnimation = false, currentProject = 1, amountProjects;
+const amountSlides = 6, usSlide = 2, portfolioSlide = 5, animationSpeed = 500, projectSlideSpeed = 275, time = 100;
 
 window.onload = () => {
     //todo remove comments and add 'hidden' attr where it's needed
@@ -19,7 +19,49 @@ window.onload = () => {
         $('#bottomArrow').css('opacity', '0.75');
     });
     /*-------------------------*/
-    /*navigational arrows*/
+    /*navigational buttons*/
+    $('#logo').click(() => {
+        if (currentSlide !== 1) {
+            if (currentSlide > 1 && currentSlide < 5) scrollToGivenSlide(prevSlide, 1);
+            else scrollToGivenSlide(nextSlide, 1);
+        }
+    });
+    $('#portfolioBtn').click(() => {
+        if (currentSlide !== portfolioSlide) {
+            if (currentSlide >=2 && currentSlide < 5) scrollToGivenSlide(nextSlide, portfolioSlide);
+            else scrollToGivenSlide(prevSlide, portfolioSlide);
+        }
+    });
+    $('#usBtn').click(() => {
+        if (currentSlide !== usSlide) {
+            if (currentSlide > 2 && currentSlide <= 5) scrollToGivenSlide(prevSlide, usSlide);
+            else scrollToGivenSlide(nextSlide, usSlide);
+        }
+    });
+    $('#contactsBtn').click(() => {
+        if (!liveAnimation) {
+            if ($('#slideMakeOrder').css('left') === '0px') hideSlide('slideMakeOrder');
+            liveAnimation = true;
+            $('#slideContacts').animate({
+                left: 0
+            }, {
+                duration: animationSpeed,
+                complete: () => liveAnimation = false
+            })
+        }
+    });
+    $('.makeOrder').click(() => {
+        if (!liveAnimation) {
+            liveAnimation = true;
+            if ($('#slideContacts').css('left') === '0px') hideSlide('slideContacts');
+            $('#slideMakeOrder').animate({
+                left: 0
+            }, {
+                duration: animationSpeed,
+                complete: () => liveAnimation = false
+            })
+        }
+    });
     $('#leftArrow').click(prevSlide);
     $('#rightArrow').click(nextSlide);
     /*-------------------*/
@@ -42,6 +84,9 @@ window.onload = () => {
         window.open("https://www.instagram.com/rtdnt/", '_blank');
     });
     /*--------------------*/
+    amountProjects = $('.project').length;
+
+    /*$.getJSON('Scripts/language.json',(data) => {});*/
 
     /*setTimeout(() => {
         $('#loading').fadeOut();
@@ -51,13 +96,60 @@ window.onload = () => {
     }, 500);*/
 };
 
+function scrollToGivenSlide(callback, slide) {
+    callback();
+    setTimeout(() => {
+        if (currentSlide !== slide) scrollToGivenSlide(callback, slide);
+    }, 1);
+}
+
+function nextProject() {
+    if(!liveAnimation) {
+        ++currentProject;
+        liveAnimation = true;
+        $('.project').animate({
+            left: '-=32.5vw'
+        }, {
+            duration: projectSlideSpeed,
+            complete: () => liveAnimation = false
+        });
+    }
+}
+
+function prevProject() {
+    if(!liveAnimation) {
+        --currentProject;
+        liveAnimation = true;
+        $('.project').animate({
+            left: '+=32.5vw'
+        }, {
+            duration: projectSlideSpeed,
+            complete: () => liveAnimation = false
+        });
+    }
+}
+
 //todo assign this function to onmousewheel after loading
-/*window.onmousewheel = (evt) => {
-    console.log(liveAnimation + " " + currentSlide + "/" + amountSlides);
-    console.log(evt.deltaX + ', ' + evt.deltaY);
-    if (evt.deltaY > 1) nextSlide();
-    else if (evt.deltaY < -1) prevSlide();
-};*/
+function scrollListener(evt) {
+    /*console.log(liveAnimation + " " + currentSlide + "/" + amountSlides);
+    console.log(evt.deltaX + ', ' + evt.deltaY);*/
+    if (evt.deltaY > 1) {
+        if (currentSlide === 5) {
+            if (currentProject === amountProjects) nextSlide();
+            else nextProject();
+        }
+        else nextSlide();
+
+    }
+    else if (evt.deltaY < -1) {
+        if (currentSlide === 5) {
+            if (currentProject === 1) prevSlide();
+            else prevProject();
+        }
+        else prevSlide();
+    }
+}
+window.onmousewheel = scrollListener;
 
 function toTheFirstSlide(slide) {
     setTimeout(() => {
@@ -71,28 +163,40 @@ function toTheFirstSlide(slide) {
         }
     }, time);
 }
+function hideSlide(slideToHide) {
+    $('#' + slideToHide).animate({
+        left: '100%'
+    }, {
+        duration: animationSpeed,
+        complete: () => liveAnimation = false
+    });
+}
 
 function nextSlide() {
     if (!liveAnimation) {
         liveAnimation = true;
-        if (currentSlide !== amountSlides) {
-            ++currentSlide;
-            $('#slide' + currentSlide).animate({
-                left: 0
-            },{
-                duration: animationSpeed,
-                complete: () => {
-                    $('#currentSlide').text('0' + currentSlide);
-                    liveAnimation = false;
-                }
-            });
-        }
+        if ($('#slideContacts').css('left') === '0px') hideSlide('slideContacts');
+        else if ($('#slideMakeOrder').css('left') === '0px') hideSlide('slideMakeOrder');
         else {
-            currentSlide = 1;
-            $('#slide' + amountSlides).animate({
-                left: '100%'
-            }, animationSpeed);
-            toTheFirstSlide(amountSlides - 1);
+            if (currentSlide !== amountSlides) {
+                ++currentSlide;
+                $('#slide' + currentSlide).animate({
+                    left: 0
+                }, {
+                    duration: animationSpeed,
+                    complete: () => {
+                        $('#currentSlide').text('0' + currentSlide);
+                        liveAnimation = false;
+                    }
+                });
+            }
+            else {
+                currentSlide = 1;
+                $('#slide' + amountSlides).animate({
+                    left: '100%'
+                }, animationSpeed);
+                toTheFirstSlide(amountSlides - 1);
+            }
         }
     }
 }
@@ -114,24 +218,28 @@ function toTheLastSlide(slide = 3) {
 function prevSlide() {
     if(!liveAnimation) {
         liveAnimation = true;
-        if (currentSlide !== 1) {
-            $('#slide' + currentSlide).animate({
-                left: '100%'
-            },{
-                duration: animationSpeed,
-                complete: () => {
-                    $('#currentSlide').text('0' + currentSlide);
-                    liveAnimation = false
-                }
-            });
-            --currentSlide;
-        }
+        if ($('#slideContacts').css('left') === '0px') hideSlide('slideContacts');
+        else if ($('#slideMakeOrder').css('left') === '0px') hideSlide('slideMakeOrder');
         else {
-            currentSlide = amountSlides;
-            $('#slide2').animate({
-                left: 0
-            }, animationSpeed);
-            toTheLastSlide();
+            if (currentSlide !== 1) {
+                $('#slide' + currentSlide).animate({
+                    left: '100%'
+                }, {
+                    duration: animationSpeed,
+                    complete: () => {
+                        $('#currentSlide').text('0' + currentSlide);
+                        liveAnimation = false
+                    }
+                });
+                --currentSlide;
+            }
+            else {
+                currentSlide = amountSlides;
+                $('#slide2').animate({
+                    left: 0
+                }, animationSpeed);
+                toTheLastSlide();
+            }
         }
     }
 }

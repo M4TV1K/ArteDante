@@ -28,7 +28,7 @@
                     <nav>
                         <button id="portfolioBtn">Портфоліо</button>
                         <button id="usBtn">Ми</button>
-                        <button id="Contacts">Контакти</button>
+                        <button id="contactsBtn">Контакти</button>
                     </nav>
                     <button id="soundBtn"></button>
                     <section>
@@ -58,8 +58,6 @@
         </section>
     </div>
     <p id="counter"><a id="currentSlide">01</a> / 06</p>
-
-    <div id="make-order-menu" hidden></div>
 
     <audio id="backgroundAudio" loop>
         <source src="Assets/background-audio.mp3" type="audio/mpeg">
@@ -150,25 +148,17 @@
 
         <section id="slide5" class="slide">
             <article id="projectsHolder">
-                <section id="firstProject" class="project">
+                <section id="project1" class="project">
                     <h1 class="project-name">Fatatask</h1>
                     <img class="project-img" src="Assets/slide5/fatatask.png" alt="Проект фататаск">
                     <p class="project-type">Mobile - app</p>
                 </section>
-                <section class="project">
+                <section id="project2" class="project">
                     <h1 class="project-name">Furniture</h1>
                     <img class="project-img" src="Assets/slide5/furniture.png" alt="Онлайн-магазин мебелі">
                     <p class="project-type">Інтернет - магазин</p>
                 </section>
-                <section class="project">
-                    <img class="project-img" src="Assets/slide5/kanape.png" alt="Ресторан Канапе">
-                    <p class="project-type">Брендинг/Айдентика</p>
-                </section>
-                <section class="project">
-                    <img class="project-img" src="Assets/slide5/kanape.png" alt="Ресторан Канапе">
-                    <p class="project-type">Брендинг/Айдентика</p>
-                </section>
-                <section id="lastProject" class="project">
+                <section id="project3" class="project">
                     <img class="project-img" src="Assets/slide5/kanape.png" alt="Ресторан Канапе">
                     <p class="project-type">Брендинг/Айдентика</p>
                 </section>
@@ -188,6 +178,76 @@
             <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
             <img id="bottomCloud6" class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
             <img id="bigCloud6slide" src="Assets/slide6/big-cloud.png" alt="Хмарка">
+        </section>
+
+        <section id="slideContacts" class="slide">
+            <article id="slideContactsHolder" class="slide-holder">
+                <section id="contactsHolder">
+                    <h1 id="contactsHeader">Контакти</h1>
+                    <section id="numberHolder">
+                        <h2 class="contacts-header">Номер телефону:</h2>
+                        <p class="contacts-details">
+                            <a class="contacts" href="tel:+380980462308">+380 (98) 046 23 08</a>
+                        </p>
+                    </section>
+                    <section>
+                        <h2 class="contacts-header">E-mail:</h2>
+                        <p class="contacts-details">
+                            <a class="contacts" href="mailto:iguanoro@gmail.com">iguanoro@gmail.com</a>
+                        </p>
+                    </section>
+                </section>
+            </article>
+            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
+            <img class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
+        </section>
+        <section id="slideMakeOrder" class="slide">
+            <article id="slideMakeOrderHolder" class="slide-holder">
+                <form id="contactMeForm">
+                    <section class="sub-holder-contacts">
+                        <label>
+                            Ім'я<br>
+                            <input id="name" class="input-box" type="text" maxlength="25">
+                        </label>
+                        <label>
+                            Прізвище<br>
+                            <input id="surname" class="input-box" type="text" maxlength="25">
+                        </label><br>
+                    </section>
+                    <section class="sub-holder-contacts">
+                        <label>
+                            E-mail:<br>
+                            <input id="email" class="input-box" type="email" maxlength="35">
+                        </label>
+                        <label>
+                            Номер телефону:<br>
+                            <input id="number" class="input-box" type="text" maxlength="13">
+                        </label>
+                    </section>
+                    <section class="sub-holder-contacts">
+                        <label>
+                            <input type="checkbox">
+                            Написати на пошту
+                        </label>
+                        <label>
+                            <input type="checkbox">
+                            Зателефонувати
+                        </label>
+                    </section>
+                    <section class="sub-holder-contacts">
+                        <label>
+                            Коротко опишіть задачу:<br>
+                            <textarea form="contactMeForm"></textarea>
+                        </label>
+                        <div>
+                            <input id="submitOrder" type="submit" value="Відправити">
+                            <img id="submitArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                        </div>
+                    </section>
+                </form>
+            </article>
+            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
+            <img id="makeOrderCloud" class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
         </section>
     </article>
 </body>
