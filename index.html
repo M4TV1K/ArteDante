@@ -13,13 +13,11 @@
     <script src="Scripts/index.js"></script>
 </head>
 <body>
-    <!--<div id="loading" hidden>
+    <div id="loading">
         <img id="loadLeftHand" src="Assets/loading/load-left-hand.png" alt="Рука зліва показуюча на загрузку">
         <span class="load"></span>
         <img id="loadRightHand" src="Assets/loading/load-right-hand.png" alt="Руку справа показуюча на загрузку">
-    </div>-->
-
-    <!--style="display: none"-->
+    </div>
     <div id="nav-menu">
         <article>
             <section id="menuContainer">
@@ -30,7 +28,7 @@
                         <button id="usBtn">Ми</button>
                         <button id="contactsBtn">Контакти</button>
                     </nav>
-                    <button id="soundBtn"></button>
+                    <button class="soundBtn"></button>
                     <section>
                         <button id="makeOrderTop" class="makeOrder"><a id="lightUpTop">Замовит</a>и проект</button>
                         <img id="topArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
@@ -59,10 +57,29 @@
     </div>
     <p id="counter"><a id="currentSlide">01</a> / 06</p>
 
+    <article id="mobileTopHeader">
+        <h1 id="mobileLogo">ArteDante</h1>
+        <button class="soundBtn"></button>
+        <button id="menuButton"></button>
+    </article>
+    <article id="mobileMenu">
+        <article id="mobileMenuContainer">
+            <section id="menuHeader">
+                <section>
+                    <button id="engLanguageMobile" class="language-btn">Eng</button>
+                    <button id="ruLanguageMobile" class="language-btn">Рус</button>
+                    <button id="uaLanguageMobile" class="language-btn">Укр</button>
+                </section>
+                <button id="menuCloseBtn"></button>
+            </section>
+        </article>
+    </article>
+
     <audio id="backgroundAudio" loop>
         <source src="Assets/background-audio.mp3" type="audio/mpeg">
     </audio>
     <video id="backgroundVideo" preload="auto" autoplay loop muted src="Assets/slide1/final.mp4"></video>
+
     <article id="slides">
         <section id="slide1" class="slide">
             <article id="slide1Holder">
@@ -109,6 +126,7 @@
                 </section>
             </article>
             <img id="man" src="Assets/slide3/stuck-man.png" alt="Чоловік, який застряг">
+            <p id="sadText">Ехх... Треба було<br> замовляти в ArteDante</p>
         </section>
 
         <section id="slide4" class="slide">
@@ -201,54 +219,62 @@
             <img class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
             <img class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
         </section>
+
         <section id="slideMakeOrder" class="slide">
             <article id="slideMakeOrderHolder" class="slide-holder">
                 <form id="contactMeForm">
-                    <section class="sub-holder-contacts">
+                    <article id="yourContactsHolder">
+                        <section class="sub-holder-contacts">
+                            <label>
+                                <span>Ім'я</span><br>
+                                <input id="name" class="input-box" type="text" maxlength="25">
+                            </label>
+                            <label>
+                                <span>E-mail:</span><br>
+                                <input id="email" class="input-box" type="email" maxlength="35">
+                            </label>
+                            <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox">
+                                Написати на пошту
+                            </label>
+                        </section>
+                        <section id="contactsSecondColumn" class="sub-holder-contacts">
+                            <label>
+                                <span>Прізвище</span><br>
+                                <input id="surname" class="input-box" type="text" maxlength="25">
+                            </label>
+                            <label>
+                                <span>Номер телефону:</span><br>
+                                <input id="number" class="input-box" type="text" maxlength="13">
+                            </label>
+                            <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox">
+                                Зателефонувати
+                            </label>
+                        </section>
+                    </article>
+
+                    <article id="yourAim">
                         <label>
-                            Ім'я<br>
-                            <input id="name" class="input-box" type="text" maxlength="25">
+                            <span>Коротко опишіть задачу:</span><br>
+                            <textarea form="contactMeForm" required maxlength="400" placeholder="Не можу знайти пульт від телевізора, зробіть додаток що шукає пульт від телевізора."></textarea>
                         </label>
-                        <label>
-                            Прізвище<br>
-                            <input id="surname" class="input-box" type="text" maxlength="25">
-                        </label><br>
-                    </section>
-                    <section class="sub-holder-contacts">
-                        <label>
-                            E-mail:<br>
-                            <input id="email" class="input-box" type="email" maxlength="35">
-                        </label>
-                        <label>
-                            Номер телефону:<br>
-                            <input id="number" class="input-box" type="text" maxlength="13">
-                        </label>
-                    </section>
-                    <section class="sub-holder-contacts">
-                        <label>
-                            <input type="checkbox">
-                            Написати на пошту
-                        </label>
-                        <label>
-                            <input type="checkbox">
-                            Зателефонувати
-                        </label>
-                    </section>
-                    <section class="sub-holder-contacts">
-                        <label>
-                            Коротко опишіть задачу:<br>
-                            <textarea form="contactMeForm"></textarea>
-                        </label>
-                        <div>
+                        <div id="submitButton">
                             <input id="submitOrder" type="submit" value="Відправити">
                             <img id="submitArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
                         </div>
-                    </section>
+                    </article>
                 </form>
             </article>
             <img class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
             <img id="makeOrderCloud" class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
         </section>
+    </article>
+    <article id="thankYou">
+        <h1 id="thankYouHeader">Замовлення відправлено</h1>
+        <p id="thankYouText">Скоро ми з вами зв'яжемося</p>
+        <button id="closeBtn"></button>
+        <img class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
     </article>
 </body>
 </html>

@@ -67,7 +67,7 @@ window.onload = () => {
     /*-------------------*/
 
     /*sound button*/
-    const $soundBtn = $('#soundBtn');
+    const $soundBtn = $('.soundBtn');
     $soundBtn.click(() => {
         if ($soundBtn.css('background-image').toString().includes('mute.svg')){
             $soundBtn.css('background-image', 'url(../ArteDante/Assets/nav-menu/sound.svg)');
@@ -86,15 +86,58 @@ window.onload = () => {
     /*--------------------*/
     amountProjects = $('.project').length;
 
+    /*submit order*/
+    $('#submitOrder').click(() => {
+        $('#thankYou').css('display','flex');
+        return false;
+    });
+    /*------------*/
+    /*close button*/
+    $('#closeBtn').click(() => {
+        $('#thankYou').css('display', 'none');
+        hideSlide('slideMakeOrder');
+    });
+    /*------------*/
     /*$.getJSON('Scripts/language.json',(data) => {});*/
+    window.onresize = resizeListener;
+    resizeListener();
 
-    /*setTimeout(() => {
+    /*mobile version features*/
+    $('#menuButton').click(() => {
+        $('#slides').fadeOut();
+        $('#backgroundVideo, #mobileTopHeader').css('display','none');
+        $('#mobileMenu').css('display', 'flex');
+    });
+    /*-----------------------*/
+    setTimeout(() => {
         $('#loading').fadeOut();
-        $('#nav-menu').fadeIn();
-        $('#backgroundVideo').fadeIn();
-        $('#slides').fadeIn();
-    }, 500);*/
+    }, 50);
 };
+
+
+function scrollListener(evt) {
+    if (evt.deltaY > 1) {
+        if (currentSlide === 5) {
+            if (currentProject === amountProjects) nextSlide();
+            else nextProject();
+        }
+        else nextSlide();
+
+    }
+    else if (evt.deltaY < -1) {
+        if (currentSlide === 5) {
+            if (currentProject === 1) prevSlide();
+            else prevProject();
+        }
+        else prevSlide();
+    }
+}
+
+function resizeListener() {
+    if (window.innerWidth > 2048) window.onmousewheel = scrollListener;
+    else window.onmousewheel = null;
+}
+
 
 function scrollToGivenSlide(callback, slide) {
     callback();
@@ -128,28 +171,6 @@ function prevProject() {
         });
     }
 }
-
-//todo assign this function to onmousewheel after loading
-function scrollListener(evt) {
-    /*console.log(liveAnimation + " " + currentSlide + "/" + amountSlides);
-    console.log(evt.deltaX + ', ' + evt.deltaY);*/
-    if (evt.deltaY > 1) {
-        if (currentSlide === 5) {
-            if (currentProject === amountProjects) nextSlide();
-            else nextProject();
-        }
-        else nextSlide();
-
-    }
-    else if (evt.deltaY < -1) {
-        if (currentSlide === 5) {
-            if (currentProject === 1) prevSlide();
-            else prevProject();
-        }
-        else prevSlide();
-    }
-}
-window.onmousewheel = scrollListener;
 
 function toTheFirstSlide(slide) {
     setTimeout(() => {
