@@ -72,7 +72,40 @@
                 </section>
                 <button id="menuCloseBtn"></button>
             </section>
+            <button id="mobilePortfolioBtn">Портфоліо</button>
+            <p id="mobilePhoneNumber" class="mobile-menu-header">
+                Номер телефону:<br>
+                <a class="mobile-menu-links" href="tel:+380980462308">+380 (98) 046 23 08</a>
+            </p>
+            <p class="mobile-menu-header">
+                E-mail:<br>
+                <a class="mobile-menu-links" href="mailto:iguanoro@gmail.com">iguanoro@gmail.com</a>
+            </p>
+            <p class="mobile-menu-header">
+                Telegram:<br>
+                <a class="mobile-menu-links" target="_blank" href="mailto:iguanoro@gmail.com">t.me/rtdnt</a>
+            </p>
+            <p class="mobile-menu-header">
+                Instagram:<br>
+                <a class="mobile-menu-links" target="_blank" href="https://www.instagram.com/rtdnt/">@rtdnt</a>
+            </p>
+            <p class="mobile-menu-header">
+                Facebook:<br>
+                <a class="mobile-menu-links" target="_blank" href="mailto:iguanoro@gmail.com">t.me/rtdnt</a>
+            </p>
+            <p class="mobile-menu-header">
+                Behance:<br>
+                <a class="mobile-menu-links" target="_blank" href="mailto:iguanoro@gmail.com">t.me/rtdnt</a>
+            </p>
+            <p class="mobile-menu-header">
+                Dribbble<br>
+                <a class="mobile-menu-links" target="_blank" href="mailto:iguanoro@gmail.com">t.me/rtdnt</a>
+            </p>
+
+
         </article>
+        <img id="mobileMenuTopCloud" src="Assets/slide2/cloud.png" alt="хмарка">
+        <img id="mobileMenuBottomCloud" src="Assets/slide6/big-cloud.png" alt="хмарка">
     </article>
 
     <audio id="backgroundAudio" loop>
@@ -85,7 +118,12 @@
             <article id="slide1Holder">
                 <h2 id="designNDevelopment">Design & Development</h2>
                 <h1 id="poetry">Якщо код — це поезія,<br>то ми Данте</h1>
+                <div id="makeOrderMobile">
+                    <button class="makeMobileOrder">Замовити проект</button>
+                    <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                </div>
             </article>
+            <img id="arrowDown" src="Assets/nav-menu/arrow.svg" alt="Стрілка направлена вниз">
         </section>
 
         <section id="slide2" class="slide">
@@ -103,11 +141,18 @@
                         бізнесу, а команда програмістів може<br>
                         реалізувати все задумане.
                     </p>
+                    <p id="slide2MobileText">
+                        Молода команда ArteDante, ціль якоїM<br>
+                        створювати якісний продукт, який буде<br>
+                        допомагати цілям бізнесу наших клієнтів,<br>
+                        той продукт яким будуть комфортно<br>
+                        користуватись мільйони людей.
+                    </p>
                 </section>
             </article>
             <img id="angel" src="Assets/slide2/angel.png" alt="Фотографія янгола з булькою з гумки">
-            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
-            <img class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="slide2-cloud1" class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="slide2-cloud2" class="cloud-bottom" src="Assets/slide2/cloud.png" alt="Хмарка">
         </section>
 
         <section id="slide3" class="slide">
@@ -134,7 +179,7 @@
                 <article id="slide4TextHolder">
                     <h1 id="serviceHeader">Наші послуги</h1>
                     <section id="servicesHolder">
-                        <section class="service-list">
+                        <section id="firstServiceList" class="service-list">
                             <h1 class="service-header">Бренд</h1>
                             <p class="service">Айдентика</p>
                             <p class="service">Брендинг</p>
@@ -187,9 +232,13 @@
         <section id="slide6" class="slide">
             <article id="slide6Holder" class="slide-holder">
                 <img id="digitalLeftHand" src="Assets/slide6/left-hand.png" alt="ліва рука з похибками">
-                <div>
+                <div id="slide6OrderButton">
                     <button id="makeOrderSlide" class="makeOrder"><a id="lightUpSlide">Замовит</a>и проект</button>
                     <img id="bottomArrow" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                </div>
+                <div id="slide6MobileOrder">
+                    <button class="makeMobileOrder">Замовити проект</button>
+                    <img class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
                 </div>
                 <img id="digitalRightHand" src="Assets/slide6/right-hand.png" alt="права рука з похибками">
             </article>
@@ -255,7 +304,7 @@
                     </article>
 
                     <article id="yourAim">
-                        <label>
+                        <label id="textAreaHolder">
                             <span>Коротко опишіть задачу:</span><br>
                             <textarea form="contactMeForm" required maxlength="400" placeholder="Не можу знайти пульт від телевізора, зробіть додаток що шукає пульт від телевізора."></textarea>
                         </label>

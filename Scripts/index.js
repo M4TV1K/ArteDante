@@ -108,6 +108,15 @@ window.onload = () => {
         $('#backgroundVideo, #mobileTopHeader').css('display','none');
         $('#mobileMenu').css('display', 'flex');
     });
+    $('#menuCloseBtn').click(() => {
+        $('#mobileMenu').css('display', 'none');
+        $('#backgroundVideo, #mobileTopHeader').css('display', 'flex');
+        $('#slides').fadeIn();
+    });
+    $('#makeOrderMobile').click(() => {
+        $('.slide, #backgroundVideo, #mobileTopHeader').fadeOut();
+        $('#slideMakeOrder').css('display', 'flex').fadeIn();
+    });
     /*-----------------------*/
     setTimeout(() => {
         $('#loading').fadeOut();
@@ -134,7 +143,7 @@ function scrollListener(evt) {
 }
 
 function resizeListener() {
-    if (window.innerWidth > 2048) window.onmousewheel = scrollListener;
+    if (window.innerWidth > 1024) window.onmousewheel = scrollListener;
     else window.onmousewheel = null;
 }
 
