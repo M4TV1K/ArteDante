@@ -142,7 +142,7 @@
                         реалізувати все задумане.
                     </p>
                     <p id="slide2MobileText">
-                        Молода команда ArteDante, ціль якоїM<br>
+                        Молода команда ArteDante, ціль якої<br>
                         створювати якісний продукт, який буде<br>
                         допомагати цілям бізнесу наших клієнтів,<br>
                         той продукт яким будуть комфортно<br>
@@ -156,7 +156,7 @@
         </section>
 
         <section id="slide3" class="slide">
-            <article class="slide-holder">
+            <article id="slide3Holder" class="slide-holder">
                 <section id="illustration">
                     <p id="illustrationText">Іллюстрація:</p>
                     <h1 id="whatHappens">
@@ -205,8 +205,10 @@
                     </section>
                 </article>
             </article>
-            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
+            <img id="cloudSlide4" class="cloud-top" src="Assets/slide2/cloud.png" alt="Хмарка">
             <img id="big-cloud-4slide" src="Assets/slide4/big-cloud.png" alt="Хмарка">
+            <img id="cloud2Slide4" class="hidden-cloud" src="Assets/slide4/hidden-cloud.png" alt="Хмарка">
+            <img id="cloud3Slide4" class="hidden-cloud" src="Assets/slide4/hidden-cloud.png" alt="Хмарка">
         </section>
 
         <section id="slide5" class="slide">
@@ -227,6 +229,7 @@
                 </section>
             </article>
             <img id="bigCloud5Slide" src="Assets/slide5/big-cloud.png" alt="Велика хмарка">
+            <img id="bigCloud25Slide" class="hidden-cloud" src="Assets/slide5/hidden-cloud.png" alt="Велика хмарка">
         </section>
 
         <section id="slide6" class="slide">
@@ -271,16 +274,17 @@
 
         <section id="slideMakeOrder" class="slide">
             <article id="slideMakeOrderHolder" class="slide-holder">
+                <button id="closeFormMobile"></button>
                 <form id="contactMeForm">
                     <article id="yourContactsHolder">
                         <section class="sub-holder-contacts">
                             <label>
                                 <span>Ім'я</span><br>
-                                <input id="name" class="input-box" type="text" maxlength="25">
+                                <input id="name" class="input-box" type="text" maxlength="25" required>
                             </label>
                             <label>
                                 <span>E-mail:</span><br>
-                                <input id="email" class="input-box" type="email" maxlength="35">
+                                <input id="email" class="input-box" type="email" maxlength="35" required>
                             </label>
                             <label class="checkbox-label">
                                 <input class="checkbox" type="checkbox">
@@ -290,11 +294,11 @@
                         <section id="contactsSecondColumn" class="sub-holder-contacts">
                             <label>
                                 <span>Прізвище</span><br>
-                                <input id="surname" class="input-box" type="text" maxlength="25">
+                                <input id="surname" class="input-box" type="text" maxlength="25" required>
                             </label>
                             <label>
                                 <span>Номер телефону:</span><br>
-                                <input id="number" class="input-box" type="text" maxlength="13">
+                                <input id="number" class="input-box" type="text" maxlength="13" required>
                             </label>
                             <label class="checkbox-label">
                                 <input class="checkbox" type="checkbox">
@@ -302,7 +306,6 @@
                             </label>
                         </section>
                     </article>
-
                     <article id="yourAim">
                         <label id="textAreaHolder">
                             <span>Коротко опишіть задачу:</span><br>
@@ -314,8 +317,50 @@
                         </div>
                     </article>
                 </form>
+
+                <form id="contactMeFormMobile">
+                    <article id="yourContactsHolderMobile">
+                        <label>
+                            <span>Ім'я</span><br>
+                            <input class="input-box" type="text" maxlength="25" required>
+                        </label>
+                        <label>
+                            <span>Прізвище</span><br>
+                            <input class="input-box" type="text" maxlength="25" required>
+                        </label>
+                        <label>
+                            <span>Номер телефону:</span><br>
+                            <input class="input-box" type="text" maxlength="13" required>
+                        </label>
+                        <label>
+                            <span>E-mail:</span><br>
+                            <input class="input-box" type="email" maxlength="35" required>
+                        </label>
+
+                        <section id="checkBoxHolder">
+                            <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox">
+                                Написати на пошту
+                            </label>
+                            <label class="checkbox-label">
+                                <input class="checkbox" type="checkbox">
+                                Зателефонувати
+                            </label>
+                        </section>
+                    </article>
+                    <article id="yourAimMobile">
+                        <label id="textAreaHolderMobile">
+                            <span>Коротко опишіть задачу:</span><br>
+                            <textarea form="contactMeForm" required maxlength="400" placeholder="Не можу знайти пульт від телевізора, зробіть додаток що шукає пульт від телевізора."></textarea>
+                        </label>
+                        <div id="submitButtonMobile">
+                            <input id="submitOrderMobile" type="submit" value="Відправити">
+                            <img id="submitArrowMobile" class="smallArrowImg" src="Assets/nav-menu/arrow.svg" alt="Стрілка показуюча вправо">
+                        </div>
+                    </article>
+                </form>
             </article>
-            <img class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
+            <img id="makeOrderCloud2" class="cloud-top" src="Assets/slide2/cloud.png" alt="хмарка">
             <img id="makeOrderCloud" class="bottom-big-cloud" src="Assets/slide4/big-cloud.png" alt="велика хмарка">
         </section>
     </article>

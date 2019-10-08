@@ -31,7 +31,7 @@ body {
     margin-bottom: 4vw;
 }
 
-#mobileMenu, #mobileTopHeader {
+#mobileMenu, #mobileTopHeader, #contactMeFormMobile {
     display: none;
 }
 
@@ -109,7 +109,7 @@ nav > button:active {
 .makeOrder:active, .makeMobileOrder:active {
     opacity: 0.5;
 }
-.makeOrder, .makeMobileOrder, #submitOrder {
+.makeOrder, .makeMobileOrder, #submitOrder, #submitOrderMobile {
     cursor: pointer;
     font-family: Scada, sans-serif;
     background-color: transparent;
@@ -264,7 +264,9 @@ nav > button:active {
 }
 
 
-
+.hidden-cloud {
+    display: none;
+}
 #slides {
     width: 100%;
     height: 100%;
@@ -625,6 +627,9 @@ nav > button:active {
 #makeOrderCloud {
     z-index: 0;
 }
+#closeFormMobile {
+    display: none;
+}
 form {
     margin-top: 10vh;
     margin-left: 10vw;
@@ -707,7 +712,7 @@ textarea:focus {
     justify-content: center;
     align-items: center;
 }
-#closeBtn, #menuCloseBtn {
+#closeBtn, #menuCloseBtn, #closeFormMobile {
     cursor: pointer;
     width: 2vw;
     height: 2vw;
@@ -1069,11 +1074,17 @@ textarea:focus {
         justify-content: center;
         align-items: center;
     }
+    #closeFormMobile {
+        display: initial;
+        width: 3vw;
+        height: 3vw;
+        right: 6vw;
+        top: 5vw;
+    }
     form {
         width: initial;
         height: initial;
         margin: 0;
-        display: flex;
         flex-flow: column;
         justify-content: center;
         align-items: center;
@@ -1086,5 +1097,287 @@ textarea:focus {
     }
     textarea, #yourAim, #textAreaHolder {
         width: 100%;
+    }
+    label {
+        font-size: 2vw;
+    }
+    .input-box {
+        width: 19vw;
+        font-size: 2vw;
+        padding: 0.6vw 0.8vw 0.4vw;
+    }
+    #contactsSecondColumn {
+        margin-left: 5vw;
+    }
+    textarea {
+        height: 19vw;
+        line-height: 2.2vw;
+        font-size: 1.6vw;
+    }
+    /*thank you*/
+    #thankYouHeader {
+        font-size: 4vw;
+    }
+    #thankYouText {
+        font-size: 2.8vw;
+    }
+    /*clouds problem*/
+    .cloud-top, .cloud-bottom, .bottom-big-cloud, #slide2-cloud1, #big-cloud-4slide, #bigCloud5Slide, #bigCloud6slide {
+        display: none;
+    }
+    #slide2-cloud1 {
+        width: 55vw;
+        display: initial;
+        top: 161vh;
+        left: initial;
+        right: -15vw;
+    }
+    #cloudSlide4 {
+        display: initial;
+        top: 359vh;
+        left: -21vw;
+        width: 50vw;
+    }
+    .hidden-cloud {
+        display: initial;
+        position: absolute;
+    }
+    #cloud2Slide4 {
+        width: 40vw;
+        left: 0;
+        top: 283vh;
+    }
+    #cloud3Slide4 {
+        width: 40vw;
+        right: 0;
+        top: 318vh;
+        transform: scaleX(-1);
+    }
+    #bigCloud5Slide {
+        width: 129vw;
+        display: initial;
+        top: 385vh;
+    }
+    #bigCloud25Slide {
+        width: 100vw;
+        top: 514vh;
+    }
+    #makeOrderCloud {
+        display: initial;
+        width: 63vw;
+    }
+    #makeOrderCloud2 {
+        width: 45vw;
+        display: initial;
+        left: -3vw;
+        top: 0;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    #mobileLogo {
+        font-size: 5.5vw;
+    }
+    .soundBtn {
+        height: 4.8vw;
+        width: 9.1vw;
+    }
+    #menuButton {
+        width: 9vw;
+        height: 5vw;
+    }
+    #slide1Holder {
+        margin-right: 0;
+        margin-bottom: 13vh;
+    }
+    #poetry {
+        margin-top: 4vw;
+        font-size: 7.25vw;
+        line-height: 10vw;
+        margin-bottom: 8vw;
+    }
+    #designNDevelopment {
+        margin-bottom: 0;
+        font-size: 5vw;
+    }
+    .makeMobileOrder, .makeOrder, #submitOrder, #submitOrderMobile {
+        font-size: 5vw;
+        height: 9vw;
+        padding-left: 4vw;
+        padding-right: 4vw;
+    }
+    .smallArrowImg {
+        width: 6.5vw;
+    }
+
+    #slide2Holder {
+        width: 100vw;
+    }
+    #slide2Header {
+        font-size: 7vw;
+    }
+    #slide2MobileText {
+        font-size: 4vw;
+        line-height: 4.6vw;
+    }
+    #angel {
+        margin-top: 8vh;
+        width: 110vw;
+        right: -5vw;
+    }
+    #slide2-cloud1 {
+        width: 65vw;
+    }
+
+    #slide3Holder, #illustration {
+        width: 100%;
+    }
+    #whatHappens {
+        font-size: 5.5vw;
+    }
+    #slide3Text {
+    font-size: 4vw;
+    line-height: 4.6vw;
+    }
+    #man {
+        width: 100vw;
+        top: 206vh;
+        right: initial;
+    }
+    #sadText {
+        font-size: 3vw;
+        top: 209.5vh;
+        right: 10vw;
+    }
+    #serviceHeader {
+        font-size: 7vw;
+    }
+    .service-header {
+        font-size: 6vw;
+    }
+    .service {
+        font-size: 4.5vw;
+    }
+    .service-list {
+        margin-top: 9vh;
+    }
+    #cloud2Slide4 {
+        width: 50vw;
+        top: 287vh;
+    }
+    #cloud3Slide4 {
+        width: 50vw;
+        top: 334vh;
+    }
+    #cloudSlide4 {
+        top: 378vh;
+        width: 60vw;
+    }
+    .project-name {
+        font-size: 8vw;
+    }
+    .project-type {
+        font-size: 4.5vw;
+    }
+    .project {
+        width: 91vw;
+    }
+    #bigCloud5Slide {
+        top: 418vh;
+    }
+    #bigCloud25Slide {
+        width: 158vw;
+        top: 541vh;
+    }
+
+    #slide6 {
+        height: 40vh;
+    }
+    #slide6Holder {
+        justify-content: center;
+    }
+    #digitalLeftHand, #digitalRightHand {
+        display: none;
+    }
+    #mobileMenuBottomCloud {
+        width: 108vw;
+        height: initial;
+        right: 0;
+    }
+    #menuCloseBtn {
+        width: 6vw;
+        height: 6vw;
+    }
+    #menuHeader {
+        margin-top: 4vh;
+    }
+    .language-btn {
+        font-size: 4vw;
+    }
+    #mobileMenuTopCloud {
+        width: 64vw;
+        top: -2vh;
+        left: -12vw;
+    }
+    #mobilePortfolioBtn {
+        font-size: 6.5vw;
+    }
+    .mobile-menu-header {
+        line-height: 2.8vh;
+        font-size: 4.5vw;
+    }
+    #closeFormMobile {
+        width: 6vw;
+        height: 6vw;
+        right: 10vw;
+        top: 7vw;
+    }
+    #contactMeForm {
+        display: none;
+    }
+    #contactMeFormMobile {
+        display: flex;
+        width: 85vw;
+        margin-top: 12vh;
+    }
+    #yourContactsHolderMobile {
+        display: flex;
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+    #slideMakeOrderHolder {
+        align-items: flex-start;
+    }
+    label {
+        font-size: 4.25vw;
+    }
+    .checkbox-label {
+        margin-bottom: 0;
+    }
+    .input-box {
+        width: 55vw;
+        font-size: 4.5vw;
+        padding: 1.2vw 1.8vw 0.6vw;
+    }
+    #checkBoxHolder {
+        display: flex;
+        justify-content: space-between;
+    }
+    #yourAimMobile {
+        margin-top: 3.5vh;
+        width: 94%;
+        margin-right: auto;
+    }
+    textarea {
+        height: 27vw;
+        line-height: 4.25vw;
+        font-size: 3.6vw;
+    }
+    #submitButtonMobile {
+        margin-top: 4vh;
+        margin-bottom: 4vh;
+    }
+    #makeOrderCloud {
+        display: none;
     }
 }

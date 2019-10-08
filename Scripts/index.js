@@ -88,8 +88,7 @@ window.onload = () => {
 
     /*submit order*/
     $('#submitOrder').click(() => {
-        $('#thankYou').css('display','flex');
-        return false;
+        /*$('#thankYou').css('display','flex');*/
     });
     /*------------*/
     /*close button*/
@@ -113,9 +112,13 @@ window.onload = () => {
         $('#backgroundVideo, #mobileTopHeader').css('display', 'flex');
         $('#slides').fadeIn();
     });
-    $('#makeOrderMobile').click(() => {
+    $('.makeMobileOrder').click(() => {
         $('.slide, #backgroundVideo, #mobileTopHeader').fadeOut();
         $('#slideMakeOrder').css('display', 'flex').fadeIn();
+    });
+    $('#closeFormMobile').click(() => {
+        $('.slide, #backgroundVideo, #mobileTopHeader').fadeIn();
+        $('#slideMakeOrder, #slideContacts').css('display', 'flex').fadeOut();
     });
     /*-----------------------*/
     setTimeout(() => {
