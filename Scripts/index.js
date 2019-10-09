@@ -40,20 +40,22 @@ window.onload = () => {
     });
     $('#contactsBtn').click(() => {
         if (!liveAnimation) {
-            if ($('#slideMakeOrder').css('left') === '0px') hideSlide('slideMakeOrder');
             liveAnimation = true;
+            if ($('#slideMakeOrder').css('left') === '0px') hideSlide('slideMakeOrder');
+            $('#backgroundVideo')[0].pause();
             $('#slideContacts').animate({
                 left: 0
             }, {
                 duration: animationSpeed,
                 complete: () => liveAnimation = false
-            })
+            });
         }
     });
     $('.makeOrder').click(() => {
         if (!liveAnimation) {
             liveAnimation = true;
             if ($('#slideContacts').css('left') === '0px') hideSlide('slideContacts');
+            $('#backgroundVideo')[0].pause();
             $('#slideMakeOrder').animate({
                 left: 0
             }, {
@@ -70,11 +72,11 @@ window.onload = () => {
     const $soundBtn = $('.soundBtn');
     $soundBtn.click(() => {
         if ($soundBtn.css('background-image').toString().includes('mute.svg')){
-            $soundBtn.css('background-image', 'url(../ArteDante/Assets/nav-menu/sound.svg)');
+            $soundBtn.css('background-image', 'url(Assets/nav-menu/sound.svg)');
             $('#backgroundAudio')[0].play();
         }
         else {
-            $soundBtn.css('background-image', 'url(../ArteDante/Assets/nav-menu/mute.svg)');
+            $soundBtn.css('background-image', 'url(Assets/nav-menu/mute.svg)');
             $('#backgroundAudio')[0].pause();
         }
     });
@@ -191,6 +193,7 @@ function toTheFirstSlide(slide) {
         }, animationSpeed);
         if (slide > 2) toTheFirstSlide(slide - 1);
         else {
+            $('#backgroundVideo')[0].play();
             $('#currentSlide').text('01');
             liveAnimation = false;
         }
@@ -203,6 +206,7 @@ function hideSlide(slideToHide) {
         duration: animationSpeed,
         complete: () => liveAnimation = false
     });
+    if (currentSlide === 1) $('#backgroundVideo')[0].play();
 }
 
 function nextSlide() {
@@ -213,6 +217,7 @@ function nextSlide() {
         else {
             if (currentSlide !== amountSlides) {
                 ++currentSlide;
+                $('#backgroundVideo')[0].pause();
                 $('#slide' + currentSlide).animate({
                     left: 0
                 }, {
@@ -242,6 +247,7 @@ function toTheLastSlide(slide = 3) {
         }, animationSpeed);
         if (slide < amountSlides) toTheLastSlide(slide + 1);
         else {
+            $('#backgroundVideo')[0].pause();
             $('#currentSlide').text('06');
             liveAnimation = false;
         }
@@ -265,6 +271,7 @@ function prevSlide() {
                     }
                 });
                 --currentSlide;
+                if (currentSlide === 1) $('#backgroundVideo')[0].play();
             }
             else {
                 currentSlide = amountSlides;

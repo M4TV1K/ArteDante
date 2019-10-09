@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    background-color: #1A1A1A;
+    background: linear-gradient(90deg, #0D0D0D 0%, #1A1A1A 100%);
     overflow: hidden;
     font-family: Scada, sans-serif;
 }
@@ -133,6 +133,14 @@ nav > button:active {
     background-image: -webkit-linear-gradient(left , white 50%, transparent 50%);
     background-image: -ms-linear-gradient(left , white 50%, transparent 50%);
 }
+#submitOrder:hover {
+    background-image: linear-gradient(left , #808080 50%, transparent 50%);
+    background-image: -o-linear-gradient(left , #808080 50%, transparent 50%);
+    background-image: -moz-linear-gradient(left , #808080 50%, transparent 50%);
+    background-image: -webkit-linear-gradient(left , #808080 50%, transparent 50%);
+    background-image: -ms-linear-gradient(left , #808080 50%, transparent 50%);
+}
+
 .smallArrowImg {
     opacity: 0.75;
     transform: rotate(180deg);
@@ -770,7 +778,7 @@ textarea:focus {
 }
 @media screen and (max-width: 1024px) {
     body {
-        overflow-x: hidden;
+        height: auto;
         overflow-y: auto;
     }
     #loading > img {
@@ -782,6 +790,9 @@ textarea:focus {
     }
     #nav-menu, #vertical-menu, #counter, #slideContacts, #slideMakeOrder {
         display: none;
+    }
+    #slides {
+        height: auto;
     }
     #mobileTopHeader {
         position: fixed;
@@ -899,7 +910,7 @@ textarea:focus {
     }
 
     #slide1 {
-        height: 100%;
+        height: 100vh;
         position: relative;
     }
     #designNDevelopment {
@@ -1126,11 +1137,11 @@ textarea:focus {
         display: none;
     }
     #slide2-cloud1 {
-        width: 55vw;
+        width: 37vw;
         display: initial;
-        top: 161vh;
+        top: 170vh;
         left: initial;
-        right: -15vw;
+        right: 0;
     }
     #cloudSlide4 {
         display: initial;
@@ -1222,11 +1233,12 @@ textarea:focus {
     }
     #angel {
         margin-top: 8vh;
-        width: 110vw;
-        right: -5vw;
+        width: 100vw;
+        right: 0;
     }
     #slide2-cloud1 {
         width: 65vw;
+        top: 167vh;
     }
 
     #slide3Holder, #illustration {
@@ -1286,8 +1298,8 @@ textarea:focus {
         top: 418vh;
     }
     #bigCloud25Slide {
-        width: 158vw;
-        top: 541vh;
+        width: 100vw;
+        top: 561vh;
     }
 
     #slide6 {
