@@ -2,10 +2,10 @@
 Website layout for IT Development Studio  
 
 ## Description 
-Magnificent layout for a website project which main target is to reach customers showing experience, achievements and deleveped products. Made from already prepared design. It has really good premade animation (videos) and also great menu on tablet and mobile devices that blurries the background.  
+Gorgeous layout for a website project which main feature is the Slide System which works on Desktop. Slide System is another good way to make good impression on your potentional customers. User can use Mouse Wheel to slide throw the slide and also it has amazing navigations. Made from already prepared design. 
 
 ## Implementation
-This website is made using HTML5, CSS3, JavaScript and jQuery. The main feature here is the adaptive design that works good on desktop, tablets and mobile devices as well. This site shows why the generalization and reusement of already written CSS are important!
+This website is made using HTML5, CSS3, JavaScript and jQuery. Slide System is implemented completely with the help of JQuery in order to perform all needed animations. Also it still preserves adaptive design that works good not only on desktop, but on tablets and mobile devices as well.
 
 # Interface
 
