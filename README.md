@@ -29,6 +29,8 @@ This website is made using HTML5, CSS3, JavaScript and jQuery. Slide System is i
 
 ## Mobile
 
+![Image of the website](/readme_purpose/mobile3.PNG)
+
 ![Image of the website](/readme_purpose/mobile1.PNG)
 
 ![Image of the website](/readme_purpose/mobile2.PNG)
